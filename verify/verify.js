@@ -15,7 +15,7 @@ var wareHouseId, wareHouseURI, containerId, containerURI;
 
 describe("Test", function () {
   this.timeout(60000);
-  it("POST /containers -> 201", function (done) {
+  step("POST /containers -> 201", function (done) {
     var options = {
       url: endpoint + '/containers',
       method: 'POST',
@@ -38,7 +38,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /containers -> 200", function (done) {
+  step("GET /containers -> 200", function (done) {
     var options = {
       url: containerURI,
       method: 'GET',
@@ -87,7 +87,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /containers/{containerId} -> 200", function (done) {
+  step("GET /containers/{containerId} -> 200", function (done) {
     var options = {
       url: endpoint + '/containers' + containerId,
       method: 'GET',
@@ -125,7 +125,7 @@ describe("Test", function () {
     });
   });
   
-  it("PUT /containers/{containerId} -> 204", function (done) {
+  step("PUT /containers/{containerId} -> 204", function (done) {
     var options = {
       url: endpoint + '/containers/' + containerId,
       method: 'PUT',
@@ -144,7 +144,7 @@ describe("Test", function () {
     });
   });
   
-  it("DELETE /containers/{containerId} -> 204", function (done) {
+  step("DELETE /containers/{containerId} -> 204", function (done) {
     var options = {
       url: endpoint + '/containers/' + containerId,
       method: 'DELETE',
@@ -163,7 +163,7 @@ describe("Test", function () {
   
   
   
-  it("POST /wareHouses -> 201", function (done) {
+  step("POST /wareHouses -> 201", function (done) {
     var options = {
       url: endpoint + '/wareHouses',
       method: 'POST',
@@ -198,7 +198,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /wareHouses/{wareHouseId} -> 200", function (done) {
+  step("GET /wareHouses/{wareHouseId} -> 200", function (done) {
     var options = {
       url: endpoint + '/wareHouses/' + wareHouseId,
       method: 'GET',
@@ -245,7 +245,7 @@ describe("Test", function () {
     });
   });
   
-  it("GET /wareHouses -> 200", function (done) {
+  step("GET /wareHouses -> 200", function (done) {
     var options = {
       url: endpoint + '/wareHouses',
       method: 'GET',
@@ -299,7 +299,7 @@ describe("Test", function () {
     });
   });
   
-  it("PUT /wareHouses/{id} -> 204", function (done) {
+  step("PUT /wareHouses/{id} -> 204", function (done) {
     var options = {
       url: endpoint + '/wareHouses/' + wareHouseId,
       method: 'PUT',
@@ -319,7 +319,7 @@ describe("Test", function () {
     });
   });
   
-  it("DELETE /wareHouses -> 204", function (done) {
+  step("DELETE /wareHouses -> 204", function (done) {
     var options = {
       url: endpoint + '/wareHouses/' + wareHouseId,
       method: 'DELETE',
