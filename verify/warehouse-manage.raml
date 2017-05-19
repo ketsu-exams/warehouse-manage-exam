@@ -9,45 +9,45 @@ mediaType: application/json
       200:
         body:
           application/json:
-           schema: |
-             {
-               "$schema": "http://json-schema.org/draft-04/schema#",
-               "type": "object",
-               "totalCount": {
-                 "type": "integer"
-               },
-               "providers": {
-                 "type": "array",
-                 "properties": {
-                   "id": {
-                     "type": "integer"
-                   },
-                   "name": {
-                     "type": "string"
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "totalCount": {
+                  "type": "integer"
+                },
+                "providers": {
+                  "type": "array",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
                     },
-                    "containers": {
-                      "type": "array",
-                      "container": {
-                        "type": "integer"
-                      }
-                    },
-                    "required": ["id", "name"]
-                 }
+                    "name": {
+                      "type": "string"
+                     },
+                     "containers": {
+                       "type": "array",
+                       "container": {
+                         "type": "integer"
+                       }
+                     },
+                     "required": ["id", "name"]
+                  }
 
-               }
-             }
-          example: |
-            {
-              "totalCount": 2,
-              [{
-                "id": 1,
-                "name": "Apple House",
-                "containers": [1, 2, 4]
-               }, {
-                "id": 2,
-                "name": "Cookie House"
-              }]
-            }
+                }
+              }
+            example: |
+              {
+                "totalCount": 2,
+                [{
+                  "id": 1,
+                  "name": "Apple House",
+                  "containers": [1, 2, 4]
+                 }, {
+                  "id": 2,
+                  "name": "Cookie House"
+                }]
+              }
 
   post:
     description: As a admin, I can create a warehouse so that I can improve storage capacity.
@@ -96,31 +96,31 @@ mediaType: application/json
         200:
           body:
             application/json:
-             schema: |
-               {
-                 "$schema": "http://json-schema.org/draft-04/schema#",
-                 "type": "object",
-                 "properties": {
-                   "id": {
-                     "type": "integer"
-                   },
-                   "name": {
-                     "type": "string"
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
                     },
-                    "containers": {
-                      "type": "array",
-                      "container": {
-                        "type": "integer"
-                      }
-                    },
-                    "required": ["id", "name"]
-                 }
-               }
-            example: |
-              {
-                "name": "Super Apple",
-                "containers": [1, 2, 4]
-              }
+                    "name": {
+                      "type": "string"
+                     },
+                     "containers": {
+                       "type": "array",
+                       "container": {
+                         "type": "integer"
+                       }
+                     },
+                     "required": ["id", "name"]
+                  }
+                }
+              example: |
+                {
+                  "name": "Super Apple",
+                  "containers": [1, 2, 4]
+                }
 
     put:
       description: As a admin, I can update a warehouse's detail so that I can save containers into it.
@@ -160,6 +160,7 @@ mediaType: application/json
 
     delete:
       description: As a admin, I can delete a provider when I won't to buy products from it.
+      responses:
         204:
 
 /containers:
@@ -257,8 +258,8 @@ mediaType: application/json
                     "id": {
                       "type": "integer",
                       "required": true
-
                     }
+                  }
                 }
               example: |
                 {
